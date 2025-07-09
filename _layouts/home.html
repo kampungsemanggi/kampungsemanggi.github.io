@@ -5,7 +5,7 @@ layout: default
 <!-- Hero Section -->
 <section
   id="home"
-  class="bg-gradient-to-br from-green-300 to-green-600 min-h-screen flex items-center justify-center relative overflow-hidden"
+  class="bg-gradient-to-t from-green-700 to-green-300 min-h-screen flex items-center justify-center relative overflow-hidden"
 >
   <div class="absolute inset-0 bg-black opacity-20"></div>
   <div class="container mx-auto px-4 text-center relative z-10">
@@ -36,7 +36,7 @@ layout: default
     preserveAspectRatio="none"
     viewBox="0 0 1200 120"
     xmlns="http://www.w3.org/2000/svg"
-    style="fill: #3bc947; width: 226%; height: 107px"
+    style="fill: #006a2d; width: 226%; height: 107px"
   >
     <path
       d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z"
@@ -60,19 +60,19 @@ layout: default
     <!-- Filter Buttons -->
     <div class="flex flex-wrap justify-center mb-12 space-x-4">
       <button
-        class="filter-btn active bg-green-500 text-white px-6 py-2 rounded-full mb-2"
+        class="filter-btn active bg-green-500 text-white px-6 py-2 rounded-full mb-2 cursor-pointer"
         data-filter="all"
       >
         Semua
       </button>
       <button
-        class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full mb-2"
+        class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full mb-2 cursor-pointer"
         data-filter="makanan"
       >
         Makanan
       </button>
       <button
-        class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full mb-2"
+        class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full mb-2 cursor-pointer"
         data-filter="minuman"
       >
         Minuman
@@ -85,9 +85,10 @@ layout: default
       id="products-grid"
     >
       <!-- Pecel Semanggi -->
-      <div
+      <a
         class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
         data-category="makanan"
+        href="https://kampungsemanggi.com/teh-semanggi"
       >
         <div class="relative">
           <img
@@ -109,18 +110,110 @@ layout: default
           <div class="flex items-center justify-between">
             <span class="text-2xl font-bold text-green-500">Rp 18.000</span>
             <button
-              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer"
             >
               Lihat
             </button>
           </div>
         </div>
-      </div>
+      </a>
+
+      <!-- Pecel Semanggi instant-->
+      <a
+        class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
+        data-category="makanan"
+        href="https://kampungsemanggi.com/pecel-semanggi-instant"
+      >
+        <div class="relative">
+          <img
+            src="https://s14.gifyu.com/images/bKspb.jpg"
+            alt="Pecel Semanggi instant"
+            class="w-full h-48 object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">
+            Pecel Semanggi instant
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Pecel Semanggi dalam kemasan praktis, siap saji kapan saja
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-green-500">Rp 55.000</span>
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer"
+            >
+              Lihat
+            </button>
+          </div>
+        </div>
+      </a>
+
+      <!-- Rempeyek Semanggi -->
+      <a
+        class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
+        data-category="makanan"
+        href="https://kampungsemanggi.com/pecel-semanggi-instant"
+      >
+        <div class="relative">
+          <img
+            src="https://s14.gifyu.com/images/bKsLb.jpg"
+            alt="Rempeyek Semanggi"
+            class="w-full h-48 object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">
+            Rempeyek Semanggi
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Camilan renyah dengan cita rasa daun semanggi yang unik
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-green-500">Rp 25.000</span>
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer"
+            >
+              Lihat
+            </button>
+          </div>
+        </div>
+      </a>
+
+      <!-- Stick Semanggi -->
+      <a
+        class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
+        data-category="makanan"
+        href="https://kampungsemanggi.com/pecel-semanggi-instant"
+      >
+        <div class="relative">
+          <img
+            src="https://s14.gifyu.com/images/bKsvB.jpg"
+            alt="Stick Semanggi"
+            class="w-full h-48 object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Stick Semanggi</h3>
+          <p class="text-gray-600 mb-4">
+            Stick renyah dengan cita rasa daun semanggi yang khas
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-green-500">Rp 25.000</span>
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer"
+            >
+              Lihat
+            </button>
+          </div>
+        </div>
+      </a>
 
       <!-- Teh Semanggi -->
-      <div
+      <a
         class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
         data-category="minuman"
+        href="https://kampungsemanggi.com/teh-semanggi"
       >
         <div class="relative">
           <img
@@ -137,13 +230,13 @@ layout: default
           <div class="flex items-center justify-between">
             <span class="text-2xl font-bold text-green-500">Rp 10.000</span>
             <button
-              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer"
             >
               Lihat
             </button>
           </div>
         </div>
-      </div>
+      </a>
     </div>
 
     <!-- Load More Button -->
