@@ -1,0 +1,70 @@
+<header
+  class="fixed top-0 w-full z-50 transition-all duration-300"
+  id="header"
+  data-controller="burger"
+>
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <img
+          src="{{ site.baseurl }}/app/assets/images/logosmall.png"
+          alt="Kampung Semanggi Logo"
+          class="h-7 w-7"
+        />
+        <span class="text-xl font-bold text-gray-800">Kampung Semanggi</span>
+      </div>
+
+      <!-- Desktop menu -->
+      <div class="hidden md:flex space-x-6">
+        <a
+          href="#home"
+          class="nav-link text-gray-900 hover:text-green-900 transition-colors"
+          >Beranda</a
+        >
+        <a
+          href="#products"
+          class="nav-link text-gray-900 hover:text-green-900 transition-colors"
+          >Produk</a
+        >
+        <a
+          href="#about"
+          class="nav-link text-gray-900 hover:text-green-900 transition-colors"
+          >Tentang</a
+        >
+        <a
+          href="#contact"
+          class="nav-link text-gray-900 hover:text-green-900 transition-colors"
+          >Kontak</a
+        >
+      </div>
+
+      <!-- Burger button -->
+      <button
+        class="md:hidden"
+        data-action="click->burger#toggle"
+        aria-label="Toggle menu"
+      >
+        <i class="fas fa-bars text-gray-700"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div
+      class="mt-4 space-y-2 hidden flex-col md:hidden"
+      data-burger-target="menu"
+    >
+      <a href="#home" class="block text-gray-700 hover:text-green-500"
+        >Beranda</a
+      >
+      <a href="#products" class="block text-gray-700 hover:text-green-500"
+        >Produk</a
+      >
+      <a href="#about" class="block text-gray-700 hover:text-green-500"
+        >Tentang</a
+      >
+      <a href="#contact" class="block text-gray-700 hover:text-green-500"
+        >Kontak</a
+      >
+    </div>
+  </nav>
+</header>

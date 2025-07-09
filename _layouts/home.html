@@ -1,0 +1,501 @@
+---
+layout: default
+---
+
+<!-- Hero Section -->
+<section
+  id="home"
+  class="bg-gradient-to-br from-green-300 to-green-600 min-h-screen flex items-center justify-center relative overflow-hidden"
+>
+  <div class="absolute inset-0 bg-black opacity-20"></div>
+  <div class="container mx-auto px-4 text-center relative z-10">
+    <h1
+      class="text-5xl md:text-6xl font-bold text-white mb-6 animate-bounce-slow"
+    >
+      Kampung Semanggi
+    </h1>
+    <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">
+      produk olahan daun semanggi berkualitas tinggi dengan cita rasa
+      tradisional yang autentik.
+    </p>
+    <button
+      onclick="scrollToProducts()"
+      class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
+    >
+      Jelajahi Produk
+    </button>
+  </div>
+  <div
+    class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
+  >
+    <i class="fas fa-chevron-down text-2xl"></i>
+  </div>
+</section>
+<div style="overflow: hidden">
+  <svg
+    preserveAspectRatio="none"
+    viewBox="0 0 1200 120"
+    xmlns="http://www.w3.org/2000/svg"
+    style="fill: #3bc947; width: 226%; height: 107px"
+  >
+    <path
+      d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z"
+    />
+  </svg>
+</div>
+
+<!-- Products Section -->
+<section id="products" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        Produk Kami
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Temukan berbagai produk berkualitas tinggi yang telah dipercaya oleh
+        ribuan pelanggan
+      </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap justify-center mb-12 space-x-4">
+      <button
+        class="filter-btn active bg-green-500 text-white px-6 py-2 rounded-full mb-2"
+        data-filter="all"
+      >
+        Semua
+      </button>
+      <button
+        class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full mb-2"
+        data-filter="makanan"
+      >
+        Makanan
+      </button>
+      <button
+        class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full mb-2"
+        data-filter="minuman"
+      >
+        Minuman
+      </button>
+      <button
+        class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full mb-2"
+        data-filter="kerajinan"
+      >
+        Kerajinan
+      </button>
+    </div>
+
+    <!-- Products Grid -->
+    <div
+      class="grid grid-cols-1 md:grid-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+      id="products-grid"
+    >
+      <!-- Product 1 -->
+      <div
+        class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
+        data-category="makanan"
+      >
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1567620832895-c27abc4757d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            alt="Nasi Gudeg"
+            class="w-full h-48 object-cover"
+          />
+          <div
+            class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm"
+          >
+            Terlaris
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">
+            Nasi Gudeg Spesial
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Gudeg dengan cita rasa tradisional yang otentik
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-green-500">Rp 25.000</span>
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+            >
+              <i class="fas fa-shopping-cart mr-2"></i>Pesan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div
+        class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
+        data-category="minuman"
+      >
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1544502987-9f4950896853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG2by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            alt="Es Teh Manis"
+            class="w-full h-48 object-cover"
+          />
+          <div
+            class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm"
+          >
+            Segar
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Es Teh Manis</h3>
+          <p class="text-gray-600 mb-4">
+            Minuman segar dengan rasa teh yang autentik
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-green-500">Rp 8.000</span>
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+            >
+              <i class="fas fa-shopping-cart mr-2"></i>Pesan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div
+        class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
+        data-category="kerajinan"
+      >
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1504692951059-4dcbcf3f83ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            alt="Tas Anyaman"
+            class="w-full h-48 object-cover"
+          />
+          <div
+            class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm"
+          >
+            Handmade
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">
+            Tas Anyaman Tradisional
+          </h3>
+          <p class="text-gray-600 mb-4">Kerajinan tangan berkualitas tinggi</p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-green-500">Rp 75.000</span>
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white px-2 py-2 rounded-lg transition-colors"
+            >
+              <i class="fas fa-shopping-cart mr-2"></i>Pesan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div
+        class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
+        data-category="makanan"
+      >
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1567620832,895-c27abc4757d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            alt="Sate Ayam"
+            class="w-full h-48 object-cover"
+          />
+          <div
+            class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm"
+          >
+            Pedas
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Sate Ayam Madura</h3>
+          <p class="text-gray-600 mb-4">
+            Sate ayam dengan bumbu kacang yang nikmat
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-green-500">Rp 20.000</span>
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+            >
+              <i class="fas fa-shopping-cart mr-2"></i>Pesan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div
+        class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
+        data-category="minuman"
+      >
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1544502987-9f4950896853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            alt="Jus Buah"
+            class="w-full h-48 object-cover"
+          />
+          <div
+            class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm"
+          >
+            Segar
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Jus Buah Segar</h3>
+          <p class="text-gray-600 mb-4">
+            Berbagai macam jus buah tanpa pengawet
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-green-500">Rp 15.000</span>
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+            >
+              <i class="fas fa-shopping-cart mr-2"></i>Pesan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div
+        class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
+        data-category="kerajinan"
+      >
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1616254828082-8b7d0d5df2fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            alt="Kain Batik"
+            class="w-full h-48 object-cover"
+          />
+          <div
+            class="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm"
+          >
+            Tradisional
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">
+            Kain Batik Handmade
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Batik tradisional dengan motif autentik
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-green-500">Rp 150.000</span>
+            <button
+              class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+            >
+              <i class="fas fa-shopping-cart mr-2"></i>Pesan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-12">
+      <button
+        id="load-more"
+        class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 px-8 rounded-full transition-all duration-300"
+      >
+        Muat Lebih Banyak
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          Tentang Kami
+        </h2>
+        <p class="text-xl text-gray-600 mb-6">
+          Kampung Semanggi adalah tempat yang menyediakan produk-produk
+          berkualitas tinggi dengan cita rasa tradisional yang autentik. Kami
+          berkomitmen untuk memberikan yang terbaik untuk pelanggan.
+        </p>
+        <div class="flex items-center space-x-4 mb-4">
+          <i class="fas fa-check-circle text-green-500 text-xl"></i>
+          <span class="text-lg text-gray-700">Produk berkualitas tinggi</span>
+        </div>
+        <div class="flex items-center space-x-4 mb-4">
+          <i class="fas fa-check-circle text-green-500 text-xl"></i>
+          <span class="text-lg text-gray-700">Cita rasa tradisional</span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-check-circle text-green-500 text-xl"></i>
+          <span class="text-lg text-gray-700">Pelayanan terbaik</span>
+        </div>
+      </div>
+      <div class="text-center">
+        <img
+          src="https://images.unsplash.com/photo-1555396796-8f9d6b48cfb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          alt="Tentang Kami"
+          class="rounded-lg shadow-lg"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        Hubungi Kami
+      </h2>
+      <p class="text-xl text-gray-600">
+        Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div
+          class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+        >
+          <i class="fas fa-map-marker-alt text-green-500 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Alamat</h3>
+        <p class="text-gray-600">Jl. Semanggi No. 123, Jakarta Selatan</p>
+      </div>
+      <div class="text-center">
+        <div
+          class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+        >
+          <i class="fas fa-phone text-green-500 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Telepon</h3>
+        <p class="text-gray-600">+62 123 456 789</p>
+      </div>
+      <div class="text-center">
+        <div
+          class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+        >
+          <i class="fas fa-envelope text-green-500 text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Email</h3>
+        <p class="text-gray-600">info@kampungsemanggi.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+
+  // Header background on scroll
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("header");
+    if (window.scrollY > 50) {
+      header.classList.add("sticky-header");
+    } else {
+      header.classList.remove("sticky-header");
+    }
+  });
+
+  // Product filter
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const productCards = document.querySelectorAll(".product-card");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const filter = this.getAttribute("data-filter");
+
+      // Update active button
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("active", "bg-green-500", "text-white");
+        btn.classList.add("bg-gray-200", "text-gray-700");
+      });
+      this.classList.add("active", "bg-green-500", "text-white");
+      this.classList.remove("bg-gray-200", "text-gray-700");
+
+      // Filter products
+      productCards.forEach((card) => {
+        const category = card.getAttribute("data-category");
+        if (filter === "all" || category === filter) {
+          card.style.display = "block";
+          setTimeout(() => {
+            card.classList.add("fade-in");
+          }, 100);
+        } else {
+          card.style.display = "none";
+          card.classList.remove("fade-in");
+        }
+      });
+    });
+  });
+
+  // Scroll to products function
+  function scrollToProducts() {
+    document.getElementById("products").scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
+  // Load more products (simulation)
+  document.getElementById("load-more").addEventListener("click", function () {
+    this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Memuat...';
+
+    setTimeout(() => {
+      this.innerHTML = "Muat Lebih Banyak";
+      // Here you would normally load more products from an API
+      alert("Fitur ini akan segera tersedia!");
+    }, 1000);
+  });
+
+  // Mobile menu toggle
+  document
+    .getElementById("mobile-menu-btn")
+    .addEventListener("click", function () {
+      // Mobile menu functionality can be added here
+      alert("Menu mobile akan dikembangkan lebih lanjut!");
+    });
+
+  // Add to cart functionality
+  document.querySelectorAll(".product-card button").forEach((button) => {
+    button.addEventListener("click", function () {
+      const productCard = this.closest(".product-card");
+      const productName = productCard.querySelector("h3").textContent;
+      const productPrice = productCard.querySelector(".text-2xl").textContent;
+
+      // Simulate adding to cart
+      this.innerHTML = '<i class="fas fa-check mr-2"></i>Ditambahkan';
+      this.classList.add("bg-green-600");
+
+      setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-shopping-cart mr-2"></i>Pesan';
+        this.classList.remove("bg-green-600");
+      }, 1500);
+
+      // You would normally add the product to a cart here
+      console.log("Added to cart:", productName, productPrice);
+    });
+  });
+
+  // Animate elements on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+      }
+    });
+  });
+
+  document.querySelectorAll(".product-card").forEach((card) => {
+    observer.observe(card);
+  });
+</script>
