@@ -11,4 +11,4 @@ plugins:
   - jekyll-feed
 
 include:
-  - app
+  - _pages

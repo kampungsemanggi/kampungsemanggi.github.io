@@ -88,11 +88,11 @@ layout: default
       <a
         class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
         data-category="makanan"
-        href="https://kampungsemanggi.com/teh-semanggi"
+        href="{{ base.url }}/products/pecel-semanggi"
       >
         <div class="relative">
           <img
-            src="https://s14.gifyu.com/images/bKLXj.png"
+            src="https://s14.gifyu.com/images/bKsIj.png"
             alt="Pecel Semanggi"
             class="w-full h-48 object-cover"
           />
@@ -122,7 +122,7 @@ layout: default
       <a
         class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
         data-category="makanan"
-        href="https://kampungsemanggi.com/pecel-semanggi-instant"
+        href="{{ base.url }}/products/pecel-semanggi-instant"
       >
         <div class="relative">
           <img
@@ -153,7 +153,7 @@ layout: default
       <a
         class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
         data-category="makanan"
-        href="https://kampungsemanggi.com/pecel-semanggi-instant"
+        href="{{ base.url }}/products/rempeyek-semanggi"
       >
         <div class="relative">
           <img
@@ -184,7 +184,7 @@ layout: default
       <a
         class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
         data-category="makanan"
-        href="https://kampungsemanggi.com/pecel-semanggi-instant"
+        href="{{ base.url }}/products/stick-semanggi"
       >
         <div class="relative">
           <img
@@ -213,7 +213,7 @@ layout: default
       <a
         class="product-card bg-white rounded-lg shadow-md overflow-hidden card-hover fade-in"
         data-category="minuman"
-        href="https://kampungsemanggi.com/teh-semanggi"
+        href="{{ base.url }}/products/teh-semanggi"
       >
         <div class="relative">
           <img
@@ -238,15 +238,75 @@ layout: default
         </div>
       </a>
     </div>
+  </div>
+</section>
 
-    <!-- Load More Button -->
-    <div class="text-center mt-12">
-      <button
-        id="load-more"
-        class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 px-8 rounded-full transition-all duration-300"
-      >
-        Muat Lebih Banyak
-      </button>
+<!-- Reviews Section -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+      Kata Pelanggan
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-green-50 rounded-2xl p-6 card-hover">
+        <div class="flex items-center mb-4">
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face&auto=format"
+            alt="Sarah"
+            class="w-12 h-12 rounded-full mr-4"
+          />
+          <div>
+            <h4 class="font-semibold text-gray-800">Sarah Wijaya</h4>
+            <div class="flex text-yellow-400">
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">
+          "Pecel semanggi di sini benar-benar otentik! Rasanya seperti yang
+          dibuat nenek saya dulu. Bumbu pecelnya pas banget, tidak terlalu pedas
+          tapi tetap gurih."
+        </p>
+      </div>
+      <div class="bg-green-50 rounded-2xl p-6 card-hover">
+        <div class="flex items-center mb-4">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face&auto=format"
+            alt="Budi"
+            class="w-12 h-12 rounded-full mr-4"
+          />
+          <div>
+            <h4 class="font-semibold text-gray-800">Budi Santoso</h4>
+            <div class="flex text-yellow-400">
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">
+          "Sebagai orang Surabaya asli, saya sangat puas dengan pecel semanggi
+          di sini. Rasa tradisionalnya masih terjaga dengan baik. Harganya juga
+          sangat terjangkau!"
+        </p>
+      </div>
+      <div class="bg-green-50 rounded-2xl p-6 card-hover">
+        <div class="flex items-center mb-4">
+          <img
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face&auto=format"
+            alt="Maya"
+            class="w-12 h-12 rounded-full mr-4"
+          />
+          <div>
+            <h4 class="font-semibold text-gray-800">Maya Sari</h4>
+            <div class="flex text-yellow-400">
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">
+          "Pertama kali coba pecel semanggi dan langsung jatuh cinta! Daun
+          semanggina segar, bumbu pecelnya enak banget. Pasti akan pesan lagi!"
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -395,46 +455,6 @@ layout: default
       behavior: "smooth",
     });
   }
-
-  // Load more products (simulation)
-  document.getElementById("load-more").addEventListener("click", function () {
-    this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Memuat...';
-
-    setTimeout(() => {
-      this.innerHTML = "Muat Lebih Banyak";
-      // Here you would normally load more products from an API
-      alert("Fitur ini akan segera tersedia!");
-    }, 1000);
-  });
-
-  // Mobile menu toggle
-  document
-    .getElementById("mobile-menu-btn")
-    .addEventListener("click", function () {
-      // Mobile menu functionality can be added here
-      alert("Menu mobile akan dikembangkan lebih lanjut!");
-    });
-
-  // Add to cart functionality
-  document.querySelectorAll(".product-card button").forEach((button) => {
-    button.addEventListener("click", function () {
-      const productCard = this.closest(".product-card");
-      const productName = productCard.querySelector("h3").textContent;
-      const productPrice = productCard.querySelector(".text-2xl").textContent;
-
-      // Simulate adding to cart
-      this.innerHTML = '<i class="fas fa-check mr-2"></i>Ditambahkan';
-      this.classList.add("bg-green-600");
-
-      setTimeout(() => {
-        this.innerHTML = '<i class="fas fa-shopping-cart mr-2"></i>Pesan';
-        this.classList.remove("bg-green-600");
-      }, 1500);
-
-      // You would normally add the product to a cart here
-      console.log("Added to cart:", productName, productPrice);
-    });
-  });
 
   // Animate elements on scroll
   const observer = new IntersectionObserver((entries) => {
