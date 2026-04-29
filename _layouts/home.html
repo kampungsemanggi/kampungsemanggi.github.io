@@ -20,7 +20,7 @@ layout: default
     </p>
     <button
       onclick="scrollToProducts()"
-      class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
+      class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 cursor-pointer"
     >
       Jelajahi Produk
     </button>
@@ -241,6 +241,89 @@ layout: default
   </div>
 </section>
 
+<!-- Outlets Section -->
+<section id="outlets" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        Outlets Kami
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Temukan produk kami di berbagai outlet di seluruh Surabaya
+      </p>
+    </div>
+
+    <!-- Outlets Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Outlet 1: Pasar Rame TP6 -->
+      <div
+        class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+      >
+        <div class="relative h-64 bg-gray-200 flex items-center justify-center">
+          <img
+            src="https://via.placeholder.com/300x250?text=Pasar+Rame+TP6"
+            alt="Pasar Rame - Tunjungan Plaza"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Pasar Rame TP6</h3>
+          <div class="flex items-start space-x-2 text-gray-600">
+            <i class="fas fa-map-marker-alt text-green-500 mt-1"></i>
+            <p>
+              Tunjungan Plaza 6 lantai 5, Jl. Embong Malang No.32-36, Surabaya
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outlet 2: Pasar Atom Lt4 -->
+      <div
+        class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+      >
+        <div class="relative h-64 bg-gray-200 flex items-center justify-center">
+          <img
+            src="https://via.placeholder.com/300x250?text=Pasar+Atom+Lt4"
+            alt="Pasar Atom Food Court"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Pasar Atom Lt4</h3>
+          <div class="flex items-start space-x-2 text-gray-600">
+            <i class="fas fa-map-marker-alt text-green-500 mt-1"></i>
+            <p>Pasar Atom lantai 4, Jl. Bunguran No.45, Bongkaran, Surabaya</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outlet 3: Depot Bu Rudy -->
+      <div
+        class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+      >
+        <div class="relative h-64 bg-gray-200 flex items-center justify-center">
+          <img
+            src="https://via.placeholder.com/300x250?text=Depot+Bu+Rudy"
+            alt="Depot Bu Rudy"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">
+            Depot Bu Rudy - Dharmahusada
+          </h3>
+          <div class="flex items-start space-x-2 text-gray-600">
+            <i class="fas fa-map-marker-alt text-green-500 mt-1"></i>
+            <p>
+              Lantai 2, Jl. Dharmahusada No.144, Mojo, Kec. Gubeng, Surabaya
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Reviews Section -->
 <section class="py-16 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -371,7 +454,14 @@ layout: default
         </div>
         <h3 class="text-xl font-bold text-gray-800 mb-2">Alamat</h3>
         <p class="text-gray-600">
-          Jl. Sawo Bringin no32A Bringin, Sambikerep, Surabaya
+          <a
+            href="https://maps.app.goo.gl/TKEY64Uoj6Cpff1r8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-green-700 hover:underline transition"
+          >
+            Jl. Sawo Bringin No. 32A, Bringin, Sambikerep, Surabaya
+          </a>
         </p>
       </div>
       <div class="text-center">
@@ -380,8 +470,16 @@ layout: default
         >
           <i class="fas fa-phone text-green-500 text-2xl"></i>
         </div>
-        <h3 class="text-xl font-bold text-gray-800 mb-2">Telepon</h3>
-        <p class="text-gray-600">+62 8113 349 008</p>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Telepon & WA</h3>
+        <p class="text-gray-600">
+          <a
+            href="https://wa.me/628113349008?text=Halo%20saya%20ingin%20menghubungi%20Kampung%20Semanggi"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-green-700 hover:underline transition"
+            >+62 8113 349 008</a
+          >
+        </p>
       </div>
       <div class="text-center">
         <div
